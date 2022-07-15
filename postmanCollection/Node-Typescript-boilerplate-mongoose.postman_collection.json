@@ -1,0 +1,360 @@
+{
+	"info": {
+		"_postman_id": "bfe62449-2782-4dc2-9855-898e95736032",
+		"name": "Node-Typescript-boilerplate-mongoose",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12358364"
+	},
+	"item": [
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "get all roles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/role/list?page=1&limit=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"role",
+								"list"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "user sign-up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Chirag\",\r\n    \"lastName\": \"Mehta\",\r\n    \"avatar\": \"\",\r\n    \"email\": \"chiragmehta900@gmail.com\",\r\n    \"password\": \"qazxsw123\",\r\n    \"confirmPassword\": \"qazxsw123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/user/sign-up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"sign-up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user verify-email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"chiragmehta900@gmail.com\",\r\n    \"otp\": \"736721\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/user/verify-email",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"verify-email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"chiragmehta900@gmail.com\",\r\n    \"password\": \"qazxsw1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyY2IxNTU2NTE2ZjBmMWI1MTgwZmU2OCIsInJvbGUiOiJ1c2VyIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNjU3NDc3NTc3LCJhdWQiOiJyb290IiwiaXNzIjoiY2hpcmFnbWVodGE5MDBAZ21haWwuY29tIiwic3ViIjoiY2hpcmFnbWVodGE5MDBAZ21haWwuY29tIn0.WXIs2hh36kF2OCSrz3QQdOUqSa6B3-i5pJa7aGj5qdA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/user/fetch/62cb1556516f0f1b5180fe68",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"fetch",
+								"62cb1556516f0f1b5180fe68"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user fetch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyY2IxNTU2NTE2ZjBmMWI1MTgwZmU2OCIsInJvbGUiOiJ1c2VyIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNjU3NDc3NTc3LCJhdWQiOiJyb290IiwiaXNzIjoiY2hpcmFnbWVodGE5MDBAZ21haWwuY29tIiwic3ViIjoiY2hpcmFnbWVodGE5MDBAZ21haWwuY29tIn0.WXIs2hh36kF2OCSrz3QQdOUqSa6B3-i5pJa7aGj5qdA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/user/fetch?page=1&limit=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"fetch"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update User :userId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyY2IxNTU2NTE2ZjBmMWI1MTgwZmU2OCIsInJvbGUiOiJ1c2VyIiwidG9rZW5UeXBlIjoiYWNjZXNzIiwiaWF0IjoxNjU3NTU2MjM4LCJhdWQiOiJyb290IiwiaXNzIjoiY2hpcmFnbWVodGE5MDBAZ21haWwuY29tIiwic3ViIjoiY2hpcmFnbWVodGE5MDBAZ21haWwuY29tIn0.JjFvXXFfS10ied6JyF9V0tzs0k_LAikWaZT-JnkYNmM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Chirag\",\r\n    \"lastName\": \"Mehta\",\r\n    \"dateOfBirth\": \"1998-06-28T19:25:39+00:00\",\r\n    \"residence\": \"chiragmehta900@gmail.com\",\r\n    \"avatar\": \"https://pbs.twimg.com/profile_images/1286602561412243457/uJ_ES5lb_400x400.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/user/update/62cb1556516f0f1b5180fe68",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"update",
+								"62cb1556516f0f1b5180fe68"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "user forgot password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"chiragmehta900@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/auth/forgot-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user forgot password verify otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"chiragmehta900@gmail.com\",\r\n    \"otp\": \"415062\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/auth/verify-otp",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"verify-otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user reset password with otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"chiragmehta900@gmail.com\",\r\n    \"otp\": \"415062\",\r\n    \"password\": \"qazxsw1234\",\r\n    \"confirmPassword\": \"qazxsw1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/auth/reset-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

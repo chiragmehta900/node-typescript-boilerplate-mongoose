@@ -1,0 +1,42 @@
+{
+    "name": "node-typescript-boilerplate",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/index.ts",
+    "scripts": {
+        "watch": "tsc -w",
+        "dev": "nodemon dist/index.js",
+        "start": "node dist/index.js",
+        "build": "tsc",
+        "build:lib": "tsc"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@types/jsonwebtoken": "^8.5.8",
+        "aws-sdk": "^2.1167.0",
+        "bcrypt": "^5.0.1",
+        "chalk": "^4.1.2",
+        "dotenv": "^16.0.1",
+        "express": "^4.18.1",
+        "express-validator": "^6.14.2",
+        "joi": "^17.6.0",
+        "jsonwebtoken": "^8.5.1",
+        "lodash": "^4.17.21",
+        "moment": "^2.29.3",
+        "mongoose": "^6.4.4",
+        "multer": "^1.4.5-lts.1",
+        "multer-s3": "^3.0.1",
+        "nodemailer": "^6.7.5",
+        "ts-node": "^10.8.2"
+    },
+    "devDependencies": {
+        "@types/aws-sdk": "^2.7.0",
+        "@types/bcrypt": "^5.0.0",
+        "@types/express": "^4.17.13",
+        "@types/lodash": "^4.14.182",
+        "@types/multer-s3": "^3.0.0",
+        "typescript": "^4.7.4"
+    }
+}
